@@ -51,8 +51,7 @@ npm install --global serve fkill-cli npm-quick-run \
 semantic-release-cli npm-check-updates
 
 echo "installing apps with brew --cask"
-brew install --cask alfred google-chrome firefox brave-browser \
-visual-studio-code 1password screenflow \
+brew install --cask alfred firefox brave-browser screenflow \
 discord obs zoom \
 qlcolorcode qlmarkdown qlstephen quicklook-json webpquicklook \
 qlvideo spotify focus dropbox qmoji slack --force
