@@ -26,6 +26,8 @@ echo "Hello $(whoami)! Let's get you set up."
 echo "mkdir -p ${HOME}/Projects"
 mkdir -p "${HOME}/Projects"
 
+sudo softwareupdate --install-rosetta
+
 echo "installing homebrew"
 # install homebrew https://brew.sh
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
