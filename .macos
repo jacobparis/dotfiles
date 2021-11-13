@@ -52,12 +52,10 @@ semantic-release-cli npm-check-updates
 
 echo "installing apps with brew --cask"
 brew install --cask alfred firefox brave-browser screenflow \
-discord obs zoom \
-qlcolorcode qlmarkdown qlstephen quicklook-json webpquicklook \
-qlvideo spotify focus dropbox qmoji slack
+discord obs zoom webpquicklook spotify focus dropbox qmoji slack
 
 # echo "Generating a new SSH key for GitHub"
-# ssh-keygen -t ed25519 -C "jacob@jacobpariseau.com" -f ~/.ssh/id_ed25519
+# ssh-keygen -t ed25519 -C "jacob@jacobparis.com" -f ~/.ssh/id_ed25519
 # eval "$(ssh-agent -s)"
 # touch ~/.ssh/config
 # echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" | tee ~/.ssh/config
@@ -73,7 +71,7 @@ ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 echo "making system modifications:"
 
 # Make Chrome Two finger swipe for back and forward
-defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool TRUE
+defaults write com.google.Chrome AppleEnableSwipeNavigateWithScrolls -bool true
 
 ###############################################################################
 # General UI/UX                                                               #
