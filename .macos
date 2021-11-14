@@ -54,19 +54,18 @@ echo "installing apps with brew --cask"
 brew install --cask alfred firefox brave-browser screenflow \
 discord obs zoom webpquicklook spotify focus dropbox qmoji slack
 
-# echo "Generating a new SSH key for GitHub"
-# ssh-keygen -t ed25519 -C "jacob@jacobparis.com" -f ~/.ssh/id_ed25519
-# eval "$(ssh-agent -s)"
-# touch ~/.ssh/config
-# echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" | tee ~/.ssh/config
-# ssh-add -K ~/.ssh/id_ed25519
-# echo "run 'pbcopy < ~/.ssh/id_ed25519.pub' and paste that into GitHub"
+echo "Generating a new SSH key for GitHub"
+ssh-keygen -t ed25519 -C "jacob@jacobparis.com" -f ~/.ssh/id_ed25519
+eval "$(ssh-agent -s)"
+touch ~/.ssh/config
+echo "Host *\n AddKeysToAgent yes\n UseKeychain yes\n IdentityFile ~/.ssh/id_ed25519" | tee ~/.ssh/config
+ssh-add --apple-use-keychain ~/.ssh/id_ed25519
+echo "run 'pbcopy < ~/.ssh/id_ed25519.pub' and paste that into GitHub"
 
 echo "cloning dotfiles"
 git clone git@github.com:jacobparis/dotfiles.git "${HOME}/dotfiles"
 ln -s "${HOME}/dotfiles/.zshrc" "${HOME}/.zshrc"
 ln -s "${HOME}/dotfiles/.gitignore_global" "${HOME}/.gitignore_global"
-ln -s "${HOME}/dotfiles/.gitconfig" "${HOME}/.gitconfig"
 
 echo "making system modifications:"
 
