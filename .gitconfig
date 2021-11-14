@@ -1,0 +1,15 @@
+[user]
+  name = Jacob Paris
+  email = jacob@jacobparis.com
+
+[pull]
+  rebase = true
+
+[branch]
+  autosetuprebase = always
+
+[core]
+  excludesfile = /Users/jacobpariseau/.gitignore_global
+
+[init]
+  defaultBranch = main
