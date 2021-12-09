@@ -35,25 +35,46 @@ echo "installing homebrew"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
-echo "brew installing stuff"
+echo "Installing CLI apps with Homebrew Cask"
 # delta: A fantastic diff tool
 # switchaudio-osx: allows me to switch the audio device via the command line
-brew install git git-delta switchaudio-osx
+brew install \
+  switchaudio-osx \
+  git-delta \
+  git
 
-echo "installing node (via n-install)"
+echo "Setting up the Microsoft repository"
+brew tap microsoft/git
+
+echo "Installing GUI apps with Homebrew Cask"
+brew install --cask \
+  alfred \
+  brave-browser \
+  discord \
+  docker \
+  dropbox \
+  firefox \
+  git-credential-manager-core \
+  mongodb-compass \
+  obs \
+  screenflow \
+  slack \
+  spotify \
+  zoom
+
+echo "Installing node (via n-install)"
 curl -L https://git.io/n-install | bash
 
 echo "node --version: $(node --version)"
 echo "npm --version: $(npm --version)"
 
-echo "installing a few global npm packages"
-npm install --global serve fkill-cli npm-quick-run \
-semantic-release-cli npm-check-updates
-
-echo "installing apps with brew --cask"
-brew install --cask alfred firefox brave-browser screenflow \
-discord obs zoom webpquicklook spotify focus dropbox qmoji \
-slack mongodb-compass
+echo "Installing global Node packages"
+npm install --global \
+  serve \
+  fkill-cli \
+  npm-quick-run \
+  semantic-release-cli \
+  npm-check-updates
 
 echo "Generating a new SSH key for GitHub"
 ssh-keygen -t ed25519 -C "jacob@jacobparis.com" -f ~/.ssh/id_ed25519
