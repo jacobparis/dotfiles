@@ -57,6 +57,7 @@ brew install --cask \
   git-credential-manager-core \
   mongodb-compass \
   obs \
+  obsidian \
   screenflow \
   slack \
   spotify \
