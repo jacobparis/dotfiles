@@ -41,7 +41,8 @@ echo "Installing CLI apps with Homebrew Cask"
 brew install \
   switchaudio-osx \
   git-delta \
-  git
+  git \
+  nvm
 
 echo "Setting up the Microsoft repository"
 brew tap microsoft/git
