@@ -58,6 +58,7 @@ brew install --cask \
   dropbox \
   firefox \
   git-credential-manager-core \
+  google-chrome \
   mongodb-compass \
   obs \
   obsidian \
