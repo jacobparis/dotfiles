@@ -65,6 +65,7 @@ brew install --cask \
   screenflow \
   slack \
   spotify \
+  visual-studio-code \
   zoom
 
 echo "Installing node (via n-install)"
