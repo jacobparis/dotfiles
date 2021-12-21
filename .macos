@@ -51,6 +51,7 @@ brew tap microsoft/git
 
 echo "Installing GUI apps with Homebrew Cask"
 brew install --cask \
+  1password \
   alfred \
   brave-browser \
   discord \
