@@ -35,6 +35,8 @@ echo "installing homebrew"
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> ~/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
+mkdir ~/.nvm
+
 echo "Installing CLI apps with Homebrew Cask"
 # delta: A fantastic diff tool
 # switchaudio-osx: allows me to switch the audio device via the command line
